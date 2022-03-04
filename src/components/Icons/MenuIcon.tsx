@@ -3,13 +3,17 @@ import * as React from "react"
 function Menu(props) {
   return (
     <svg
+      version="1.1"
       xmlns="http://www.w3.org/2000/svg"
-      height="42px"
-      viewBox="0 0 42 42"
+      width="53px"
+      height="43px"
+      viewBox="0 0 960 768"
       {...props}
     >
-      <path d="M0 0h24v24H0V0z" fill="none" />
-      <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+      <path
+        fill="#000"
+        d="M-192 767.999h1152v-127.999h-1152v127.999zM-192 448.003h1152v-127.999h-1152v127.999zM-192 0.002v127.999h1152v-127.999h-1152z"
+      ></path>
     </svg>
   )
 }

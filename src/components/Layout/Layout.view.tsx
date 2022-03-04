@@ -47,7 +47,27 @@ export default function Layout({ children }: Props) {
     <>
       <GlobalStyle />
       <Wrapper>
-        <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+        <Header
+          siteTitle={data.site.siteMetadata?.title || `Title`}
+          pageLinks={[
+            {
+              url: "/APropos",
+              title: "A Propos de ALGIR",
+            },
+            {
+              url: "/Deroule",
+              title: "Le déroulé de la prestation",
+            },
+            {
+              url: "/MieuxMeConnaitre",
+              title: "Mieux me connaître",
+            },
+            {
+              url: "/MeContacter",
+              title: "Me contacter",
+            },
+          ]}
+        />
         <Main>{children}</Main>
       </Wrapper>
     </>

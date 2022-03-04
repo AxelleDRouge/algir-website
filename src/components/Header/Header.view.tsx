@@ -1,19 +1,26 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import { Nav, Navbar, NavbarButton, Wrapper } from "./Header.styles"
+import { ImageLink, Nav, NavbarButton, Wrapper } from "./Header.styles"
 import Menu from "../Icons/MenuIcon"
+import Navbar from "../Navbar"
+
+export type PageLink = {
+  url: string
+  title: string
+}
 
 interface Props {
   siteTitle: string
+  pageLinks: PageLink[]
 }
 
-export default function Header({ siteTitle }: Props) {
+export default function Header({ siteTitle, pageLinks }: Props) {
   const [navbarOpen, setNavbarOpen] = useState(false)
   return (
     <header>
       <Wrapper>
-        <Link to="/">
+        <ImageLink to="/">
           {
             <StaticImage
               src="../../images/ALGIR-logo.jpg"
@@ -22,25 +29,21 @@ export default function Header({ siteTitle }: Props) {
               alt={siteTitle}
             />
           }
-        </Link>
-        {navbarOpen && (
-          <Navbar>
+        </ImageLink>
+        {pageLinks &&
+          pageLinks.map(link => (
             <Nav>
-              <Link to="/APropos">A Propos de ALGIR</Link>
+              <Link to={link.url}>{link.title}</Link>
             </Nav>
-            <Nav>
-              <Link to="/Deroule">Le déroulé de la prestation</Link>
-            </Nav>
-            <Nav>
-              <Link to="/MieuxMeConnaitre">Mieux me connaître</Link>
-            </Nav>
-            <Nav>
-              <Link to="/MeContacter">Me contacter</Link>
-            </Nav>
-          </Navbar>
-        )}
-        <NavbarButton icon={<Menu />} onClick={setNavbarOpen} />
+          ))}
+        <NavbarButton
+          width={"100%"}
+          height={"100%"}
+          icon={<Menu />}
+          onClick={() => setNavbarOpen(!navbarOpen)}
+        />
       </Wrapper>
+      {navbarOpen && <Navbar pageLinks={pageLinks} />}
     </header>
   )
 }

@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import styled from "styled-components"
 import Button from "../Button"
 
@@ -7,10 +8,9 @@ export const Wrapper = styled.div`
   box-shadow: 0px 3px 6px #00000029;
   display: grid;
   align-items: center;
-  padding-left: 13px;
 
   @media screen and (max-width: 428px) {
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr auto;
   }
 
   @media screen and (min-width: 428px) {
@@ -19,8 +19,8 @@ export const Wrapper = styled.div`
   }
 `
 
-export const Navbar = styled.div``
 export const NavbarButton = styled(Button)`
+  margin-right: 39px;
   @media screen and (min-width: 428px) {
     display: none;
   }
@@ -33,5 +33,14 @@ export const Nav = styled.nav`
     text-decoration: none;
     font-size: 29px;
     color: #000000;
+  }
+  @media screen and (max-width: 428px) {
+    display: none;
+  }
+`
+
+export const ImageLink = styled(Link)`
+  .gatsby-image-wrapper {
+    margin-left: 13px;
   }
 `

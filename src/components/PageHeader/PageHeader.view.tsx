@@ -27,7 +27,7 @@ export default function PageHeader({ className }: Props) {
         <MeContacterButton />
       </Pres>
       <StaticImage
-        src="../images/home-page.jpeg"
+        src="../../images/home-page.jpg"
         width={1920}
         height={845}
         formats={["auto", "webp", "avif"]}
