@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "../Header/Header.view"
-import { Main, Wrapper } from "./Layout.styles"
+import { Facebook, Footer, Instagram, Main, Wrapper } from "./Layout.styles"
 
 import { createGlobalStyle } from "styled-components"
 
@@ -69,6 +69,10 @@ export default function Layout({ children }: Props) {
           ]}
         />
         <Main>{children}</Main>
+        <Footer>
+          <Facebook>Facebook</Facebook>
+          <Instagram>Instagram</Instagram>
+        </Footer>
       </Wrapper>
     </>
   )
