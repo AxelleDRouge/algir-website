@@ -9,7 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "../Header/Header.view"
+import Header from "./Header/Header.view"
 import { Facebook, Footer, Instagram, Main, Wrapper } from "./Layout.styles"
 
 import { createGlobalStyle } from "styled-components"

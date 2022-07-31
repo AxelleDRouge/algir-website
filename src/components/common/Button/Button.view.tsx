@@ -5,8 +5,9 @@ interface Props {
   className?: string
   icon?: JSX.Element
   text?: string
-  width?: number
-  height?: number
+  width?: number | string
+  height?: number | string
+  onClick: () => void
 }
 
 export default function Button({
@@ -15,9 +16,10 @@ export default function Button({
   text,
   width,
   height,
+  onClick,
 }: Props) {
   return (
-    <Wrapper className={className}>
+    <Wrapper className={className} onClick={onClick}>
       {icon && (
         <StyledIcon width={width} height={height}>
           {icon}

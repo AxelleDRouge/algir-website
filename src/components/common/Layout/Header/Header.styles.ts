@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
 import styled from "styled-components"
-import Button from "../Button"
+import Button from "../../Button"
 
 export const Wrapper = styled.div`
   height: 125px;
@@ -20,7 +20,7 @@ export const Wrapper = styled.div`
 `
 
 export const NavbarButton = styled(Button)`
-  margin-right: 39px;
+  padding: 30px;
   @media screen and (min-width: 428px) {
     display: none;
   }

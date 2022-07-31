@@ -1,35 +1,35 @@
 import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
-import ExpandMore from "../Icons/ExpandMore"
-import TrendingDown from "../Icons/TrendingDown"
-import TrendingUp from "../Icons/TrendingUp"
+import { Header } from "../../common/Header"
+import Quote from "../../common/Icons/Quote"
 import {
+  Bulle,
   Chiffre,
   ChiffreExplication,
-  Clients,
-  Header,
+  CloseQuote,
   Icon,
   Images,
   LinkButton,
   MainText,
+  OpenQuote,
   P,
   Pres,
-  Question,
-  Questions,
   Reverse,
   ReverseHeader,
   Service,
   ServiceText,
   SubText,
-  Titre,
+  TrendingDownIcon,
+  TrendingUpIcon,
   Wrapper,
-} from "./PageHeader.styles"
+} from "./MainPage.styles"
+import { Questions } from "../../pages/MainPage/Questions"
 
 interface Props {
   className?: string
 }
 
-export default function PageHeader({ className }: Props) {
+export default function MainPage({ className }: Props) {
   return (
     <Wrapper className={className}>
       <Pres>
@@ -42,15 +42,14 @@ export default function PageHeader({ className }: Props) {
           d’optimiser vos dépenses.
         </SubText>
         <LinkButton>Me contacter</LinkButton>
+        <StaticImage
+          src="../../images/home-page.jpg"
+          width={1920}
+          height={845}
+          formats={["auto", "webp", "avif"]}
+          alt="algir-home-background"
+        />
       </Pres>
-      <StaticImage
-        src="../../images/home-page.jpg"
-        width={1920}
-        height={845}
-        formats={["auto", "webp", "avif"]}
-        alt="algir-home-background"
-        style={{ gridArea: "1/1" }}
-      />
       <Service>
         <Header>Le service</Header>
         <ServiceText>
@@ -85,7 +84,7 @@ export default function PageHeader({ className }: Props) {
         <LinkButton>Détail de la prestation</LinkButton>
       </Service>
       <Reverse>
-        <ReverseHeader>Chiffres</ReverseHeader>
+        <ReverseHeader>Les chiffres clés</ReverseHeader>
         <Chiffre>
           <Icon>XX %</Icon>
           <ChiffreExplication>
@@ -94,7 +93,7 @@ export default function PageHeader({ className }: Props) {
         </Chiffre>
         <Chiffre>
           <Icon>
-            <TrendingDown width={"20vw"} height={"100%"} />
+            <TrendingDownIcon />
           </Icon>
           <ChiffreExplication>
             Lorem ipsum dolor sit amet, consetetur
@@ -102,48 +101,53 @@ export default function PageHeader({ className }: Props) {
         </Chiffre>
         <Chiffre>
           <Icon>
-            <TrendingUp width={"20vw"} height={"100%"} />
+            <TrendingUpIcon />
           </Icon>
           <ChiffreExplication>
             Lorem ipsum dolor sit amet, consetetur
           </ChiffreExplication>
         </Chiffre>
       </Reverse>
-      <Questions>
-        <Header>Questions fréquentes</Header>
-        <Question>
-          <Titre>Question 1</Titre>
-          <ExpandMore width={"10vw"} height={"100%"} />
-        </Question>
-        <Question>
-          <Titre>Question 2</Titre>
-          <ExpandMore width={"10vw"} height={"100%"} />
-        </Question>
-        <Question>
-          <Titre>Question 3</Titre>
-          <ExpandMore width={"10vw"} height={"100%"} />
-        </Question>
-        <Question>
-          <Titre>Question 4</Titre>
-          <ExpandMore width={"10vw"} height={"100%"} />
-        </Question>
-        <Question>
-          <Titre>Question 5</Titre>
-          <ExpandMore width={"10vw"} height={"100%"} />
-        </Question>
-        <Question>
-          <Titre>Question 6</Titre>
-          <ExpandMore width={"10vw"} height={"100%"} />
-        </Question>
-        <Question>
-          <Titre>Question 7</Titre>
-          <ExpandMore width={"10vw"} height={"100%"} />
-        </Question>
-        <Question>
-          <Titre>Question 8</Titre>
-          <ExpandMore width={"10vw"} height={"100%"} />
-        </Question>
-      </Questions>
+      <Questions
+        questions={[
+          {
+            titre: "Question 1",
+            content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat`,
+          },
+          {
+            titre: "Question 2",
+            content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat`,
+          },
+          {
+            titre: "Question 3",
+            content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat`,
+          },
+          {
+            titre: "Question 4",
+            content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat`,
+          },
+        ]}
+      />
       <Reverse>
         <ReverseHeader>Les clients</ReverseHeader>
         <Images>
@@ -153,6 +157,18 @@ export default function PageHeader({ className }: Props) {
           <StaticImage src="../../images/bricoDepot.png" alt="brico-depot" />
           <StaticImage src="../../images/carrefour.png" alt="carrefour" />
         </Images>
+        <OpenQuote />
+        <Bulle>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat
+        </Bulle>
+        <CloseQuote>
+          <Quote />
+        </CloseQuote>
       </Reverse>
     </Wrapper>
   )

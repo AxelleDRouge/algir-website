@@ -1,6 +1,10 @@
 import styled from "styled-components"
+import { Header } from "../../common/Header"
+import Quote from "../../common/Icons/Quote"
+import TrendingDown from "../../common/Icons/TrendingDown"
 
 const DEFAULT_COLOR = "#e9937e"
+const CLEAR_COLOR = "#FFCEC3"
 
 export const Wrapper = styled.div`
   position: relative;
@@ -10,16 +14,13 @@ export const Wrapper = styled.div`
   text-align: center;
 
   .gatsby-image-wrapper {
-    height: 845px !important;
+    height: 845px;
     position: absolute;
     z-index: -1;
-    @media screen and (min-width: 1440px) {
-      width: 1920px !important;
-    }
   }
 `
 export const Pres = styled.div`
-  height: 845px !important;
+  height: 845px;
   grid-area: 1/1;
   position: relative;
   place-items: center;
@@ -48,19 +49,13 @@ export const SubText = styled.div`
 export const Service = styled.div`
   margin: 5vh 7vw;
 `
-export const Header = styled.div`
-  color: ${DEFAULT_COLOR};
-  font-size: 29px;
-  text-align: center;
-  font-weight: bold;
-  margin: 5vh;
-`
+
 export const Text = styled.div``
 export const LinkButton = styled.div`
   cursor: pointer;
   background-color: ${DEFAULT_COLOR};
   border-radius: 30px;
-  margin: 5vh 7vw;
+  margin: auto;
   padding: 15px;
   display: flex;
   width: 300px;
@@ -78,15 +73,6 @@ export const P = styled.p`
   display: flex;
   text-align: justify;
 `
-
-export const Reverse = styled.div`
-  background-color: ${DEFAULT_COLOR};
-  padding: 7vmin;
-`
-
-export const ReverseHeader = styled(Header)`
-  color: white;
-`
 export const Chiffre = styled.div`
   color: white;
 `
@@ -94,23 +80,33 @@ export const Icon = styled.div`
   font-size: 44px;
   color: white;
 `
+
+export const TrendingDownIcon = styled(TrendingDown)`
+  width: 20vw;
+  height: 100%;
+
+  @media screen and (min-width: 1440px) {
+    width: 7vw;
+    height: 100%;
+  }
+`
+
+export const TrendingUpIcon = styled(TrendingDown)`
+  width: 20vw;
+  height: 100%;
+  transform: rotateX(180deg);
+
+  @media screen and (min-width: 1440px) {
+    width: 7vw;
+    height: 100%;
+  }
+`
 export const ChiffreExplication = styled.div`
   margin: 2vh;
-`
-export const Questions = styled.div`
-  margin: 5vh 7vw;
-`
-export const Question = styled.div`
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 80%;
-`
-export const Titre = styled.span`
-  flex-grow: 1;
-  color: black;
-  text-align: justify;
-  font-size: 18px;
+
+  @media screen and (min-width: 1440px) {
+    font-size: 26px;
+  }
 `
 
 export const Clients = styled.div`
@@ -122,14 +118,66 @@ export const Images = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  height: fit-content;
+
+  @media screen and (min-width: 1440px) {
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: 300px 300px;
+    grid-gap: 5vmin;
+  }
+
   .gatsby-image-wrapper {
-    height: 100% !important;
+    height: 100%;
     width: 45%;
     position: relative;
     z-index: unset;
     margin: 8px;
+
     @media screen and (min-width: 1440px) {
+      height: unset;
       width: unset;
+      position: relative;
+      z-index: unset;
+      margin: 8px;
     }
   }
+`
+
+export const Reverse = styled.div`
+  background-color: ${DEFAULT_COLOR};
+  padding: 7vmin;
+  display: grid;
+  grid-template-rows: auto auto auto;
+`
+
+export const ReverseHeader = styled(Header)`
+  color: white;
+
+  @media screen and (min-width: 1440px) {
+    font-size: 40px;
+  }
+`
+export const Bulle = styled.div`
+  background-color: ${CLEAR_COLOR};
+  border-radius: 10%;
+  padding: 5vmin;
+  margin: 0 7vmin;
+
+  @media screen and (min-width: 1440px) {
+    font-size: 26px;
+    border-radius: 25px;
+  }
+`
+export const OpenQuote = styled(Quote)`
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  position: relative;
+  bottom: -35px;
+`
+export const CloseQuote = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  top: -35px;
 `
