@@ -14,13 +14,17 @@ export const Wrapper = styled.div`
   text-align: center;
 
   .gatsby-image-wrapper {
-    height: 845px;
+    height: 549px;
     position: absolute;
     z-index: -1;
+
+    @media screen and (min-width: 1440px) {
+      height: 845px;
+    }
   }
 `
 export const Pres = styled.div`
-  height: 845px;
+  height: 549px;
   grid-area: 1/1;
   position: relative;
   place-items: center;
@@ -31,18 +35,24 @@ export const Pres = styled.div`
   display: grid;
   justify-content: center;
   grid-template-rows: auto auto auto;
+
+  @media screen and (min-width: 1440px) {
+    height: 845px;
+  }
 `
 export const MainText = styled.div`
-  font-size: 40px;
+  font-size: 29px;
   font-weight: bold;
-  @media screen and (max-width: 425px) {
-    font-size: 29px;
+
+  @media screen and (min-width: 1440px) {
+    font-size: 40px;
   }
 `
 export const SubText = styled.div`
-  font-size: 32px;
-  @media screen and (max-width: 425px) {
-    font-size: 24px;
+  font-size: 24px;
+
+  @media screen and (min-width: 1440px) {
+    font-size: 32px;
   }
 `
 
@@ -51,16 +61,65 @@ export const Service = styled.div`
 `
 
 export const Text = styled.div``
-export const LinkButton = styled.div`
+export const LinkButton = styled.div<{ width: number; focus: boolean }>`
+  position: absolute;
+  z-index: 2;
+  bottom: 80px;
+  left: ${props => `${props.width / 2 - 130}px`};
   cursor: pointer;
   background-color: ${DEFAULT_COLOR};
   border-radius: 30px;
   margin: auto;
   padding: 15px;
   display: flex;
-  width: 300px;
+  width: 200px;
   justify-content: center;
+  color: white;
+  box-shadow: ${props =>
+    props.focus
+      ? `rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;`
+      : `rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset`};
+
+  @media screen and (min-width: 1440px) {
+    &:hover {
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    }
+  }
 `
+export const DirectButton = styled.div<{ width: number; focus: boolean }>`
+  position: relative;
+  z-index: 2;
+  bottom: 5px;
+  left: ${props => `${props.width / 2 - 130}px`};
+  cursor: pointer;
+  background-color: ${DEFAULT_COLOR};
+  border-radius: 30px;
+  margin: auto;
+  padding: 15px;
+  display: flex;
+  width: 200px;
+  justify-content: center;
+  color: white;
+  box-shadow: ${props =>
+    props.focus
+      ? `rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;`
+      : `rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset`};
+
+  @media screen and (min-width: 1440px) {
+    &:hover {
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    }
+  }
+`
+
 export const ServiceText = styled.div`
   color: black;
   font-size: 18px;
@@ -122,8 +181,8 @@ export const Images = styled.div`
 
   @media screen and (min-width: 1440px) {
     display: grid;
-    grid-template-columns: 400px 400px 400px;
-    grid-template-rows: 300px 300px;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 200px 200px;
     grid-gap: 5vmin;
   }
 
@@ -143,6 +202,10 @@ export const Images = styled.div`
     }
   }
 `
+export const Row = styled.div`
+  display: flex;
+  justify-content: space-between;
+`
 
 export const Reverse = styled.div`
   background-color: ${DEFAULT_COLOR};
@@ -152,8 +215,6 @@ export const Reverse = styled.div`
 `
 
 export const ReverseHeader = styled(Header)`
-  color: white;
-
   @media screen and (min-width: 1440px) {
     font-size: 40px;
   }

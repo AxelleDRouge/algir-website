@@ -9,11 +9,11 @@ export const Wrapper = styled.div`
   display: grid;
   align-items: center;
 
-  @media screen and (max-width: 428px) {
+  @media screen and (max-width: 1024px) {
     grid-template-columns: 1fr auto;
   }
 
-  @media screen and (min-width: 428px) {
+  @media screen and (min-width: 1024px) {
     grid-template-columns: auto auto auto auto 1fr;
     grid-gap: 45px;
   }
@@ -21,7 +21,7 @@ export const Wrapper = styled.div`
 
 export const NavbarButton = styled(Button)`
   padding: 30px;
-  @media screen and (min-width: 428px) {
+  @media screen and (min-width: 1024px) {
     display: none;
   }
 `
@@ -34,7 +34,7 @@ export const Nav = styled.nav`
     font-size: 29px;
     color: #000000;
   }
-  @media screen and (max-width: 428px) {
+  @media screen and (max-width: 1024px) {
     display: none;
   }
 `

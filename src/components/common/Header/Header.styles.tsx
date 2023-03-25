@@ -5,5 +5,5 @@ export const Header = styled.div<{ color: string }>`
   font-size: 29px;
   text-align: center;
   font-weight: bold;
-  margin: 5vh;
+  margin: 2vh;
 `

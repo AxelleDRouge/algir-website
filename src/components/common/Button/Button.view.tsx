@@ -7,7 +7,8 @@ interface Props {
   text?: string
   width?: number | string
   height?: number | string
-  onClick: () => void
+  onClick?: () => void
+  type?: string
 }
 
 export default function Button({
@@ -17,9 +18,10 @@ export default function Button({
   width,
   height,
   onClick,
+  type,
 }: Props) {
   return (
-    <Wrapper className={className} onClick={onClick}>
+    <Wrapper className={className} onClick={onClick} type={type}>
       {icon && (
         <StyledIcon width={width} height={height}>
           {icon}

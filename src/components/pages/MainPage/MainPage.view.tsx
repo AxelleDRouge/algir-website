@@ -7,6 +7,7 @@ import {
   Chiffre,
   ChiffreExplication,
   CloseQuote,
+  DirectButton,
   Icon,
   Images,
   LinkButton,
@@ -16,6 +17,7 @@ import {
   Pres,
   Reverse,
   ReverseHeader,
+  Row,
   Service,
   ServiceText,
   SubText,
@@ -41,7 +43,6 @@ export default function MainPage({ className }: Props) {
           pour les réduire. »  Sur ce principe je vous propose d’analyser et
           d’optimiser vos dépenses.
         </SubText>
-        <LinkButton>Me contacter</LinkButton>
         <StaticImage
           src="../../images/home-page.jpg"
           width={1920}
@@ -80,11 +81,11 @@ export default function MainPage({ className }: Props) {
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </P>
+          <DirectButton>Détail de la prestation</DirectButton>
         </ServiceText>
-        <LinkButton>Détail de la prestation</LinkButton>
       </Service>
       <Reverse>
-        <ReverseHeader>Les chiffres clés</ReverseHeader>
+        <ReverseHeader color={"white"}>Les chiffres clés</ReverseHeader>
         <Chiffre>
           <Icon>XX %</Icon>
           <ChiffreExplication>
@@ -149,7 +150,7 @@ export default function MainPage({ className }: Props) {
         ]}
       />
       <Reverse>
-        <ReverseHeader>Les clients</ReverseHeader>
+        <ReverseHeader color={"white"}>Les clients</ReverseHeader>
         <Images>
           <StaticImage src="../../images/natixis.png" alt="natixis" />
           <StaticImage src="../../images/pierreFabre.png" alt="pierre-fabre" />

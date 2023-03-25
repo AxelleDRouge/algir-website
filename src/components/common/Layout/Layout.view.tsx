@@ -6,8 +6,7 @@
  */
 
 import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 import Header from "./Header/Header.view"
 import { Facebook, Footer, Instagram, Main, Wrapper } from "./Layout.styles"
@@ -70,8 +69,7 @@ export default function Layout({ children }: Props) {
         />
         <Main>{children}</Main>
         <Footer>
-          <Facebook>Facebook</Facebook>
-          <Instagram>Instagram</Instagram>
+          <Link to="/MentionsLegales">Mentions Légales</Link>
         </Footer>
       </Wrapper>
     </>

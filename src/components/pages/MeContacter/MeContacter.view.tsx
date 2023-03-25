@@ -1,6 +1,14 @@
 import React from "react"
 import { Header } from "../../common/Header"
-import { Input, Tel, Textarea, Titre, Wrapper } from "./MeContacter.styles"
+import {
+  Form,
+  Input,
+  SendButton,
+  Tel,
+  Textarea,
+  Titre,
+  Wrapper,
+} from "./MeContacter.styles"
 
 export default function MeContacterView() {
   return (
@@ -9,11 +17,22 @@ export default function MeContacterView() {
       <Titre>Par téléphone</Titre>
       <Tel>+ 33 (0)6 67 67 65 45</Tel>
       <Titre>Par mail</Titre>
-      <Input placeholder={"Nom"} />
-      <Input placeholder={"Prénom"} />
-      <Input placeholder={"Société"} />
-      <Input placeholder={"Mail"} />
-      <Textarea placeholder={"Message"} row={10} />
+      <Form
+        method="post"
+        action="https://getform.io/f/12e11e80-2351-4955-b0ac-648fa3ccea95"
+      >
+        <Input placeholder={"Nom"} name="lastname" id="lastname" />
+        <Input placeholder={"Prénom"} name="firstname" id="firstname" />
+        <Input placeholder={"Société"} name="company" id="company" />
+        <Input placeholder={"Mail"} type="email" name="email" id="email" />
+        <Textarea
+          placeholder={"Message"}
+          row={10}
+          name="message"
+          id="message"
+        />
+        <SendButton type="submit" text="Envoyer" />
+      </Form>
     </Wrapper>
   )
 }

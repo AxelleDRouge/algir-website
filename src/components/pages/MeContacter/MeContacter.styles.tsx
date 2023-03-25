@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import Button from "../../common/Button"
 
 const DEFAULT_COLOR = "#e9937e"
 
@@ -36,4 +37,32 @@ export const Textarea = styled.textarea`
   border-color: ${DEFAULT_COLOR};
   color: ${DEFAULT_COLOR};
   border: 1px solid ${DEFAULT_COLOR};
+  margin-bottom: 10px;
+`
+export const SendButton = styled(Button)`
+  position: relative;
+  cursor: pointer;
+  background-color: ${DEFAULT_COLOR};
+  border-radius: 30px;
+  margin: auto;
+  padding: 15px;
+  display: flex;
+  width: 200px;
+  justify-content: center;
+  color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+  @media screen and (min-width: 1440px) {
+    &:hover {
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    }
+  }
+`
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 `

@@ -9,6 +9,7 @@ export const Main = styled.main`
 `
 export const Footer = styled.div`
   padding: 5vh 7vw;
+  margin: auto;
 `
 export const Facebook = styled.div``
 export const Instagram = styled.div``
