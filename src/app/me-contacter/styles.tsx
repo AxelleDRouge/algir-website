@@ -12,6 +12,7 @@ export const Wrapper = styled.div`
 
 export const Titre = styled.h2`
   text-align: left;
+  color: black;
 `;
 
 export const Tel = styled.div`

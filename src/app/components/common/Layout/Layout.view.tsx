@@ -17,7 +17,7 @@ export default function Layout({ children }: Props) {
         pageLinks={[
           {
             url: "/mieux-me-connaitre",
-            title: "Expérience",
+            title: "Mieux me connaitre",
           },
           {
             url: "/me-contacter",

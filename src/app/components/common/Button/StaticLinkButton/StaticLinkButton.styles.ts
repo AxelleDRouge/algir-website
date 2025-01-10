@@ -2,10 +2,6 @@ import { DEFAULT_COLOR } from "@/app/config";
 import styled from "styled-components";
 
 export const Link = styled.div<{ width: number; focus: boolean }>`
-  position: absolute;
-  z-index: 2;
-  bottom: 80px;
-  left: ${(props) => `${props.width / 2 - 150}px`};
   cursor: pointer;
   background-color: ${DEFAULT_COLOR};
   border-radius: 30px;

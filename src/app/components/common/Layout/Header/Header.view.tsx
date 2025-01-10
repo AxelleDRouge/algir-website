@@ -21,36 +21,34 @@ interface Props {
 export default function Header({ siteTitle, pageLinks }: Props) {
   const [navbarOpen, setNavbarOpen] = useState(false);
   return (
-    <header>
-      <Wrapper>
-        <ImageLink href="/">
-          <Image src={Logo} width={118} height={61} alt={siteTitle} />
-        </ImageLink>
-        {pageLinks &&
-          pageLinks.map((link) => (
-            <Nav key={link.title}>
-              <Link href={link.url}>{link.title}</Link>
-            </Nav>
-          ))}
-        {!navbarOpen ? (
-          <NavbarButton
-            width={"100%"}
-            height={"100%"}
-            icon={<Menu />}
-            onClick={() => {
-              setNavbarOpen(true);
-            }}
-          />
-        ) : (
-          <NavbarButton
-            width={"100%"}
-            height={"100%"}
-            icon={<Close />}
-            onClick={() => setNavbarOpen(false)}
-          />
-        )}
-      </Wrapper>
+    <Wrapper>
+      <ImageLink href="/">
+        <Image src={Logo} width={118} height={61} alt={siteTitle} />
+      </ImageLink>
+      {pageLinks &&
+        pageLinks.map((link) => (
+          <Nav key={link.title}>
+            <Link href={link.url}>{link.title}</Link>
+          </Nav>
+        ))}
+      {!navbarOpen ? (
+        <NavbarButton
+          width={"100%"}
+          height={"100%"}
+          icon={<Menu />}
+          onClick={() => {
+            setNavbarOpen(true);
+          }}
+        />
+      ) : (
+        <NavbarButton
+          width={"100%"}
+          height={"100%"}
+          icon={<Close />}
+          onClick={() => setNavbarOpen(false)}
+        />
+      )}
       <Navbar pageLinks={pageLinks} visible={navbarOpen} />
-    </header>
+    </Wrapper>
   );
 }

@@ -9,16 +9,18 @@ import {
   ReverseHeader,
   Service,
   ServiceText,
-  SubText,
+  StyledImage,
   UL,
   Wrapper,
 } from "./styles";
 import { Questions } from "./components/Questions";
 import LinkButton from "./components/common/Button/LinkButton";
-import { DirectButton } from "./components/common/Button/DirectButton";
 import HomeImage from "./components/common/Images/HomePageImage/HomePageImage";
 import ExperienceContent from "./components/ExperienceContent/ExperienceContent";
 import { CLEAR_COLOR } from "./config";
+import { Typography } from "@mui/material";
+import photoPerso from "./assets/images/photoPerso.jpg";
+import StaticLinkButton from "./components/common/Button/StaticLinkButton";
 
 export default function HomePage() {
   return (
@@ -26,86 +28,59 @@ export default function HomePage() {
       <Wrapper>
         <Pres>
           <HomeImage />
-          <MainText>Optimisation des dépenses externes des PME</MainText>
-          <div></div>
-          <SubText>
-            Selon le baromètre Stratégie Achats / PhD Business Solution 2021,{" "}
-            <br /> 3 PME sur 5 ne disposent pas de Service Achats, et 1 PME sur
-            10 emploie un Responsable des Achats.
-          </SubText>
+          <StyledImage src={photoPerso} alt="me" width={250} />
+          <MainText>
+            <Typography variant="h2" component="div">
+              Optimisation des dépenses externes des PME
+            </Typography>
+          </MainText>
         </Pres>
-        <Service>
-          <ServiceText>
-            <P>
-              Et pourtant, les achats représentent en moyenne 60% du chiffre
-              d’affaires d’une PME, dont 15% à 40% uniquement pour les frais
-              généraux, rendant cruciale une gestion efficace pour améliorer la
-              performance globale de l’entreprise.
-            </P>
-            <P>
-              La charge des Achats repose bien souvent sur le chef d’entreprise,
-              ou ses proches collaborateurs. Mais ce n’est pas leur métier, ils
-              ont d’autres priorités et peu de temps à y consacrer.
-            </P>
-            <P>
-              C’est pour alléger cette charge et améliorer leur performance que
-              j’ai créé ALGIR. ALGIR est une structure de conseil en achats et
-              gestion des dépenses externes, totalement indépendante, à
-              destination des PME. Je pose un regard extérieur sur vos dépenses,
-              pour identifier et mettre en œuvre toutes les pistes
-              d’optimisation des coûts et des processus.
-            </P>
-            <P>
-              Mon objectif est de permettre aux dirigeants de gagner les “3T” :
-            </P>
-            <P>
-              <br />
-              <UL>
-                <li>Trésorerie</li>
-                <li>Temps</li>
-                <li>
-                  Tranquillité d’esprit pour se concentrer sur leur activité
-                </li>
-              </UL>
-            </P>
-          </ServiceText>
-        </Service>
         <Reverse>
-          <ReverseHeader color={"white"}>
-            En quoi consiste la prestation ?
-          </ReverseHeader>
-          <P>
-            Algir c&apos;est :<br />
-          </P>
-          <P>
-            <OL>
-              <li>
-                Plus de 15 ans d’expérience dans des entreprises très diverses,
-                spécialisé dans les frais généraux et la gestion des achats dans
-                des environnements multi-sites
-              </li>
-              <li>
-                La connaissance d’un large spectre de catégories achats, un
-                réseau de fournisseurs qualifiés
-              </li>
-              <li>
-                Un regard extérieur et objectif sur votre organisation, avec une
-                vision transversale et “Projet”, qui intègre au processus Achats
-                les autres fonctions de l’entreprise (opérationnels,
-                comptabilité, ressources humaines, etc.)
-              </li>
-              <li>
-                Une offre centrée sur l’analyse de vos données et l’audit des
-                processus, pour vous proposer des recommandations établies selon
-                vos besoins
-              </li>
-              <li>
-                Une prestation externalisée, qui vous permet de bénéficier des
-                compétences d’une Acheteuse expérimentée, quand vous en avez
-                besoin, et qui reste disponible jusqu’à la fin du projet.
-              </li>
-            </OL>
-          </P>
+          <ServiceText>
+            <Typography variant="h5">
+              <P>
+                Selon le baromètre Stratégie Achats / PhD Business Solution
+                2021, 3 PME sur 5 ne disposent pas de Service Achats, et 1 PME
+                sur 10 emploie un Responsable des Achats.
+              </P>
+            </Typography>
+            <Typography variant="body2" sx={{ fontSize: "18px" }}>
+              <P>
+                Et pourtant, les achats représentent en moyenne 60% du chiffre
+                d’affaires d’une PME, dont 15% à 40% uniquement pour les frais
+                généraux, rendant cruciale une gestion efficace pour améliorer
+                la performance globale de l’entreprise.
+              </P>
+              <P>
+                La charge des Achats repose bien souvent sur le chef
+                d’entreprise, ou ses proches collaborateurs. Mais ce n’est pas
+                leur métier, ils ont d’autres priorités et peu de temps à y
+                consacrer.
+              </P>
+              <P>
+                C’est pour alléger cette charge et améliorer leur performance
+                que j’ai créé ALGIR. ALGIR est une structure de conseil en
+                achats et gestion des dépenses externes, totalement
+                indépendante, à destination des PME. Je pose un regard extérieur
+                sur vos dépenses, pour identifier et mettre en œuvre toutes les
+                pistes d’optimisation des coûts et des processus.
+              </P>
+              <P>
+                Mon objectif est de permettre aux dirigeants de gagner les “3T”
+                :
+              </P>
+              <P>
+                <br />
+                <UL>
+                  <li>Trésorerie</li>
+                  <li>Temps</li>
+                  <li>
+                    Tranquillité d’esprit pour se concentrer sur leur activité
+                  </li>
+                </UL>
+              </P>
+            </Typography>
+          </ServiceText>
         </Reverse>
         <Questions
           questions={[
@@ -168,6 +143,7 @@ Je ne passe aucun accord d’apport d’affaires avec les fournisseurs que je re
             backgroundColor={CLEAR_COLOR}
             textColor={"black"}
           />
+          <StaticLinkButton />
         </Reverse>
       </Wrapper>
       <LinkButton />

@@ -5,7 +5,7 @@ export const StyledImage = styled(Image)`
   height: 549px;
   width: 1920px;
   position: absolute;
-  opacity: 0.7;
+  opacity: 0.6;
 
   @media screen and (min-width: 1440px) {
     height: 845px;

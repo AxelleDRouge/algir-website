@@ -3,13 +3,18 @@ import { DefaultButton } from "../../Button/DefaultButton";
 import Link from "next/link";
 import { CLEAR_COLOR } from "@/app/config";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.header`
   height: 125px;
   width: 100%;
   box-shadow: 0px 3px 6px #00000029;
   display: grid;
   align-items: center;
   background-color: ${CLEAR_COLOR};
+  padding: 2vh 7vw;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
 
   @media screen and (max-width: 1024px) {
     grid-template-columns: 1fr auto;

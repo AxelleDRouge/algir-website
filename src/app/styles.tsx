@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Header } from "./components/common/Header";
 import TrendingDown from "./components/common/Icons/TrendingDown";
 import { CLEAR_COLOR, DEFAULT_COLOR } from "./config";
+import Image from "next/image";
 
 export const Wrapper = styled.div`
   position: relative;
@@ -23,7 +24,9 @@ export const Pres = styled.div`
   padding: 0 7vw;
   display: grid;
   justify-content: center;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto;
+  grid-template-columns: auto auto;
+  grid-gap: 5vmin;
 
   @media screen and (min-width: 1440px) {
     height: 845px;
@@ -38,13 +41,9 @@ export const MainText = styled.div`
     font-size: 40px;
   }
 `;
-export const SubText = styled.div`
-  font-size: 24px;
-  z-index: 0;
-
-  @media screen and (min-width: 1440px) {
-    font-size: 32px;
-  }
+export const StyledImage = styled(Image)`
+  opacity: 1;
+  z-index: 1;
 `;
 
 export const Service = styled.div`
@@ -54,7 +53,7 @@ export const Service = styled.div`
 export const Text = styled.div``;
 
 export const ServiceText = styled.div`
-  color: black;
+  color: white;
   font-size: 18px;
   display: flex;
   justify-content: flex-start;
@@ -77,9 +76,6 @@ export const UL = styled.ul`
   padding: 10px;
 `;
 
-export const Chiffre = styled.div`
-  color: white;
-`;
 export const Icon = styled.div`
   font-size: 44px;
   color: white;
@@ -117,20 +113,7 @@ export const Clients = styled.div`
   background-color: ${DEFAULT_COLOR};
   padding: 7vmin;
 `;
-export const Images = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  height: fit-content;
 
-  @media screen and (min-width: 1440px) {
-    display: grid;
-    grid-template-columns: 200px 200px 200px;
-    grid-template-rows: 200px 200px;
-    grid-gap: 5vmin;
-  }
-`;
 export const Row = styled.div`
   display: flex;
   justify-content: space-between;

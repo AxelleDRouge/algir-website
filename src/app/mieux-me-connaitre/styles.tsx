@@ -11,12 +11,16 @@ export const Wrapper = styled.div`
   background-color: ${CLEAR_COLOR};
 `;
 
+export const HeadLine = styled.div`
+  display: flex;
+  gap: 10vw;
+`;
+
 export const P = styled.p`
   display: flex;
   text-align: justify;
   color: black;
   font-size: 18px;
-  margin: 2vh 7vw;
 
   @media screen and (min-width: 1440px) {
     font-size: 26px;
