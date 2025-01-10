@@ -1,17 +1,18 @@
-import React from "react"
-import { StyledIcon, StyledText, Wrapper } from "./Button.styles"
+"use client";
+import React from "react";
+import { StyledIcon, StyledText, Wrapper } from "./DefaultButton.styles";
 
 interface Props {
-  className?: string
-  icon?: JSX.Element
-  text?: string
-  width?: number | string
-  height?: number | string
-  onClick?: () => void
-  type?: string
+  className?: string;
+  icon?: JSX.Element;
+  text?: string;
+  width?: number | string;
+  height?: number | string;
+  onClick?: () => void;
+  type?: "button" | "submit" | "reset" | undefined;
 }
 
-export default function Button({
+export default function DefaultButton({
   className,
   icon,
   text,
@@ -29,5 +30,5 @@ export default function Button({
       )}
       {text && <StyledText>{text}</StyledText>}
     </Wrapper>
-  )
+  );
 }

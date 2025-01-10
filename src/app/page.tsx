@@ -1,194 +1,176 @@
 "use client";
 
-import React, { useState } from "react";
-import Layout from "./components/common/Layout";
-import useWindowDimensions from "./hooks/useWindowDimensions.hook";
-import Quote from "./components/common/Icons/Quote";
 import {
-  Bulle,
-  Chiffre,
-  ChiffreExplication,
-  CloseQuote,
-  DirectButton,
-  Icon,
-  Images,
-  LinkButton,
   MainText,
-  OpenQuote,
+  OL,
   P,
   Pres,
   Reverse,
   ReverseHeader,
-  Row,
   Service,
   ServiceText,
   SubText,
-  TrendingDownIcon,
-  TrendingUpIcon,
+  UL,
   Wrapper,
 } from "./styles";
 import { Questions } from "./components/Questions";
-import { Header } from "./components/common/Header";
-import { useRouter } from "next/navigation";
-import Image from "next/image";
+import LinkButton from "./components/common/Button/LinkButton";
+import { DirectButton } from "./components/common/Button/DirectButton";
+import HomeImage from "./components/common/Images/HomePageImage/HomePageImage";
+import ExperienceContent from "./components/ExperienceContent/ExperienceContent";
+import { CLEAR_COLOR } from "./config";
 
 export default function HomePage() {
-  const { width } = useWindowDimensions();
-  const [focus, setFocus] = useState(false);
-  const router = useRouter();
-
   return (
-    <Layout>
+    <>
       <Wrapper>
         <Pres>
-          <MainText>
-            Faîtes vos achats autrement, en optimisant vos coûts récurrents ?
-          </MainText>
+          <HomeImage />
+          <MainText>Optimisation des dépenses externes des PME</MainText>
+          <div></div>
           <SubText>
-            « Aucune dépense n’est incompressible, il est toujours possible
-            d’agir pour les réduire. »  Sur ce principe je vous propose
-            d’analyser et d’optimiser vos dépenses.
+            Selon le baromètre Stratégie Achats / PhD Business Solution 2021,{" "}
+            <br /> 3 PME sur 5 ne disposent pas de Service Achats, et 1 PME sur
+            10 emploie un Responsable des Achats.
           </SubText>
-          <Image
-            src="../../images/home-page.jpg"
-            width={1920}
-            height={845}
-            alt="algir-home-background"
-          />
         </Pres>
         <Service>
-          <Header>Le service</Header>
           <ServiceText>
             <P>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Et pourtant, les achats représentent en moyenne 60% du chiffre
+              d’affaires d’une PME, dont 15% à 40% uniquement pour les frais
+              généraux, rendant cruciale une gestion efficace pour améliorer la
+              performance globale de l’entreprise.
             </P>
             <P>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              La charge des Achats repose bien souvent sur le chef d’entreprise,
+              ou ses proches collaborateurs. Mais ce n’est pas leur métier, ils
+              ont d’autres priorités et peu de temps à y consacrer.
             </P>
             <P>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              C’est pour alléger cette charge et améliorer leur performance que
+              j’ai créé ALGIR. ALGIR est une structure de conseil en achats et
+              gestion des dépenses externes, totalement indépendante, à
+              destination des PME. Je pose un regard extérieur sur vos dépenses,
+              pour identifier et mettre en œuvre toutes les pistes
+              d’optimisation des coûts et des processus.
             </P>
-            <DirectButton focus={focus} width={width}>
-              <>Détail de la prestation</>
-            </DirectButton>
+            <P>
+              Mon objectif est de permettre aux dirigeants de gagner les “3T” :
+            </P>
+            <P>
+              <br />
+              <UL>
+                <li>Trésorerie</li>
+                <li>Temps</li>
+                <li>
+                  Tranquillité d’esprit pour se concentrer sur leur activité
+                </li>
+              </UL>
+            </P>
           </ServiceText>
         </Service>
         <Reverse>
-          <ReverseHeader color={"white"}>Les chiffres clés</ReverseHeader>
-          <Chiffre>
-            <Icon>XX %</Icon>
-            <ChiffreExplication>
-              Lorem ipsum dolor sit amet, consetetur
-            </ChiffreExplication>
-          </Chiffre>
-          <Chiffre>
-            <Icon>
-              <TrendingDownIcon />
-            </Icon>
-            <ChiffreExplication>
-              Lorem ipsum dolor sit amet, consetetur
-            </ChiffreExplication>
-          </Chiffre>
-          <Chiffre>
-            <Icon>
-              <TrendingUpIcon />
-            </Icon>
-            <ChiffreExplication>
-              Lorem ipsum dolor sit amet, consetetur
-            </ChiffreExplication>
-          </Chiffre>
+          <ReverseHeader color={"white"}>
+            En quoi consiste la prestation ?
+          </ReverseHeader>
+          <P>
+            Algir c&apos;est :<br />
+          </P>
+          <P>
+            <OL>
+              <li>
+                Plus de 15 ans d’expérience dans des entreprises très diverses,
+                spécialisé dans les frais généraux et la gestion des achats dans
+                des environnements multi-sites
+              </li>
+              <li>
+                La connaissance d’un large spectre de catégories achats, un
+                réseau de fournisseurs qualifiés
+              </li>
+              <li>
+                Un regard extérieur et objectif sur votre organisation, avec une
+                vision transversale et “Projet”, qui intègre au processus Achats
+                les autres fonctions de l’entreprise (opérationnels,
+                comptabilité, ressources humaines, etc.)
+              </li>
+              <li>
+                Une offre centrée sur l’analyse de vos données et l’audit des
+                processus, pour vous proposer des recommandations établies selon
+                vos besoins
+              </li>
+              <li>
+                Une prestation externalisée, qui vous permet de bénéficier des
+                compétences d’une Acheteuse expérimentée, quand vous en avez
+                besoin, et qui reste disponible jusqu’à la fin du projet.
+              </li>
+            </OL>
+          </P>
         </Reverse>
         <Questions
           questions={[
             {
-              titre: "Question 1",
-              content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat`,
+              titre:
+                "Mon entreprise est petite et nous sommes des prestataires de services. Nous ne faisons pas d’achats. Que peux-tu optimiser chez nous ?",
+              content: `Si vous payez des factures, vous faites des achats.<br />
+              <br />
+              Quels que soient la taille de l’entreprise et le secteur d’activité, il y a des sujets incontournables :<br />
+              <ul>
+              <li>l’énergie</li>
+              <li>les assurances</li>
+              <li>le loyer et l’entretien des locaux professionnels</li>
+              <li>la téléphonie, la bureautique et l’informatique</li>
+              <li>la protection sociale des salariés (santé, prévoyance, etc.)</li>
+              <li>taxes diverses</li>
+              <li>…</li>
+              </ul>
+              <br />
+              Si vous avez des équipes sur le terrain, il leur faut :<br />
+              <ul>
+              <li>s’équiper : matériel, entretien , pièces détachées, vérifications réglementaires</li>
+              <li>communiquer : téléphone / tablette / ordinateur, protection anti-chocs et anti-vol, accès internet mobile</li>
+              <li>se déplacer : véhicule, carburant, hôtel, restaurant, avion/train</li>
+              <li>être protégés : EPI, dispositifs de protection du travailleur isolé</li>
+              <li>etc.</li>
+              </ul>
+              <br />
+              <br />
+
+              Sur tous ces postes, sans exception, il est possible d’optimiser les dépenses et les organisations.
+
+              `,
             },
             {
-              titre: "Question 2",
-              content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat`,
+              titre: "Comment tu te rémunères ?",
+              content: `La prestation est facturée au forfait, en fonction du temps passé. <br />
+D’autres modes de facturation peuvent être envisagés, selon la typologie de mission.
+`,
             },
             {
-              titre: "Question 3",
-              content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat`,
+              titre: "Est-ce qu’il y a un engagement de durée à respecter ?",
+              content: `Aucun engagement.  <br />
+Chaque mission est différente, elle peut durer ½ journée, comme 2 jours par semaine, ou plusieurs mois.  <br />
+L’offre de services est établie sur mesure, en fonction de la problématique du client.
+`,
             },
             {
-              titre: "Question 4",
-              content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat`,
+              titre:
+                "Les fournisseurs que tu recommandes, ils te reversent combien ?",
+              content: `Rien.  <br />
+Je ne passe aucun accord d’apport d’affaires avec les fournisseurs que je recommande. Si je les recommande, c’est que je crois en leurs capacités à répondre aux besoins des clients.
+`,
             },
           ]}
         />
         <Reverse>
-          <ReverseHeader color={"white"}>Les clients</ReverseHeader>
-          <Images>
-            <Image src="../../images/natixis.png" alt="natixis" />
-            <Image src="../../images/pierreFabre.png" alt="pierre-fabre" />
-            <Image src="../../images/vinci.png" alt="vinci" />
-            <Image src="../../images/bricoDepot.png" alt="brico-depot" />
-            <Image src="../../images/carrefour.png" alt="carrefour" />
-          </Images>
-          <OpenQuote />
-          <Bulle>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat
-          </Bulle>
-          <CloseQuote>
-            <Quote />
-          </CloseQuote>
+          <ReverseHeader color={"white"}>Expérience</ReverseHeader>
+          <ExperienceContent
+            backgroundColor={CLEAR_COLOR}
+            textColor={"black"}
+          />
         </Reverse>
       </Wrapper>
-      <LinkButton
-        width={width}
-        focus={focus}
-        onClick={() => {
-          setFocus(true);
-          router.push("/me-contacter");
-        }}
-      >
-        Me contacter
-      </LinkButton>
-    </Layout>
+      <LinkButton />
+    </>
   );
 }

@@ -1,18 +1,18 @@
-import styled from "styled-components"
-import Button from "../components/common/Button"
+import styled from "styled-components";
+import { DefaultButton } from "../components/common/Button/DefaultButton";
 
-const DEFAULT_COLOR = "#e9937e"
+const DEFAULT_COLOR = "#e9937e";
 
 export const Wrapper = styled.div`
   position: relative;
   display: grid;
   justify-content: center;
   text-align: center;
-`
+`;
 
 export const Titre = styled.h2`
   text-align: left;
-`
+`;
 
 export const Tel = styled.div`
   color: ${DEFAULT_COLOR};
@@ -20,7 +20,7 @@ export const Tel = styled.div`
   text-align: left;
   font-weight: bold;
   margin: 5vh;
-`
+`;
 
 export const Input = styled.input`
   font-size: 29px;
@@ -29,7 +29,7 @@ export const Input = styled.input`
   border-color: ${DEFAULT_COLOR};
   color: ${DEFAULT_COLOR};
   border: 1px solid ${DEFAULT_COLOR};
-`
+`;
 
 export const Textarea = styled.textarea`
   font-size: 29px;
@@ -38,8 +38,8 @@ export const Textarea = styled.textarea`
   color: ${DEFAULT_COLOR};
   border: 1px solid ${DEFAULT_COLOR};
   margin-bottom: 10px;
-`
-export const SendButton = styled(Button)`
+`;
+export const SendButton = styled(DefaultButton)`
   position: relative;
   cursor: pointer;
   background-color: ${DEFAULT_COLOR};
@@ -60,9 +60,9 @@ export const SendButton = styled(Button)`
         rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     }
   }
-`
+`;
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-`
+`;

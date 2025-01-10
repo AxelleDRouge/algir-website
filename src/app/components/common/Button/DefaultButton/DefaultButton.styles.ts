@@ -11,7 +11,7 @@ export const Wrapper = styled.button`
     background-color: #00000029;
   }
 `
-export const StyledIcon = styled.div<{ width: number; height: number }>`
+export const StyledIcon = styled.div<{ width?: number | string; height?: number | string }>`
   height: ${props => props.height};
   width: ${props => props.width};
 `

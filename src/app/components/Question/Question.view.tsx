@@ -1,4 +1,5 @@
-import React, { useState } from "react"
+"use client";
+import React, { useState } from "react";
 import {
   QuestionTitre,
   ExpandMoreIcon,
@@ -6,14 +7,14 @@ import {
   QuestionContent,
   QuestionButton,
   ExpandMoreReverseIcon,
-} from "./Question.styles"
+} from "./Question.styles";
 
 interface Props {
-  question: Question
+  question: Question;
 }
 
 export default function Question({ question }: Props) {
-  const [show, setShow] = useState(false)
+  const [show, setShow] = useState(false);
 
   return (
     <QuestionItem>
@@ -22,7 +23,10 @@ export default function Question({ question }: Props) {
         icon={show ? <ExpandMoreReverseIcon /> : <ExpandMoreIcon />}
         onClick={() => setShow(!show)}
       ></QuestionButton>
-      <QuestionContent visible={show}>{question.content}</QuestionContent>
+      <QuestionContent
+        visible={show}
+        dangerouslySetInnerHTML={{ __html: question.content }}
+      ></QuestionContent>
     </QuestionItem>
-  )
+  );
 }

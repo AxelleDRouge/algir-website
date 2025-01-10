@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { ImageLink, Nav, NavbarButton, Wrapper } from "./Header.styles";
 import Menu from "../../Icons/MenuIcon";
@@ -5,6 +6,7 @@ import Navbar from "../Navbar";
 import Close from "../../Icons/Close";
 import Image from "next/image";
 import Link from "next/link";
+import Logo from "../../../../assets/images/ALGIR-logo.jpg";
 
 export type PageLink = {
   url: string;
@@ -21,15 +23,8 @@ export default function Header({ siteTitle, pageLinks }: Props) {
   return (
     <header>
       <Wrapper>
-        <ImageLink to="/">
-          {
-            <Image
-              src="../../images/ALGIR-logo.jpg"
-              width={118}
-              height={61}
-              alt={siteTitle}
-            />
-          }
+        <ImageLink href="/">
+          <Image src={Logo} width={118} height={61} alt={siteTitle} />
         </ImageLink>
         {pageLinks &&
           pageLinks.map((link) => (

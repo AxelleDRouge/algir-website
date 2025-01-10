@@ -1,7 +1,6 @@
 import React from "react";
 import { Header } from "./Header.styles";
-
-const DEFAULT_COLOR = "#e9937e";
+import { DEFAULT_COLOR } from "@/app/config";
 
 interface Props {
   classname?: string;
