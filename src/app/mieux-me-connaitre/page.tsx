@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { Header } from "../components/common/Header";
 import { HeadLine, P, Wrapper } from "./styles";
 import ExperienceContent from "../components/ExperienceContent/ExperienceContent";
 import { DEFAULT_COLOR } from "../config";
@@ -9,6 +8,7 @@ import photoPerso from "../assets/images/photoPerso.jpg";
 import Image from "next/image";
 import { Typography } from "@mui/material";
 import { OL } from "../styles";
+import { Header } from "../components/common/Header";
 
 export default function MieuxMeConnaitrePage() {
   return (

@@ -18,6 +18,8 @@ export const Wrapper = styled.header`
 
   @media screen and (max-width: 1024px) {
     grid-template-columns: 1fr auto;
+    padding: 1vh 7vw;
+    height: 80px;
   }
 
   @media screen and (min-width: 1024px) {
@@ -27,7 +29,6 @@ export const Wrapper = styled.header`
 `;
 
 export const NavbarButton = styled(DefaultButton)`
-  padding: 30px;
   @media screen and (min-width: 1024px) {
     display: none;
   }

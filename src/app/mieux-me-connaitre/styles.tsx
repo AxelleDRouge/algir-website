@@ -7,13 +7,23 @@ export const Wrapper = styled.div`
   justify-content: center;
   text-align: center;
   gap: 10px;
-  margin: 5vh 7vw;
+  margin: 0 5vh 7vw;
   background-color: ${CLEAR_COLOR};
+  top: 125px;
+
+  @media screen and (max-width: 1025px) {
+    margin: 1vh 1vw;
+  }
 `;
 
 export const HeadLine = styled.div`
   display: flex;
   gap: 10vw;
+  padding: 10px;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const P = styled.p`
