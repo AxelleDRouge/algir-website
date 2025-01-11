@@ -1,10 +1,10 @@
 import React from "react";
 import { Header } from "../common/Header";
-import { Question } from "../Question";
+import { Question, QuestionType } from "../Question";
 import { QuestionsList } from "./Questions.styles";
 
 interface Props {
-  questions: Question[];
+  questions: QuestionType[];
 }
 
 export default function Questions({ questions }: Props) {

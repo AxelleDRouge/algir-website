@@ -2,12 +2,10 @@
 
 import {
   MainText,
-  OL,
   P,
   Pres,
   Reverse,
   ReverseHeader,
-  Service,
   ServiceText,
   StyledImage,
   UL,

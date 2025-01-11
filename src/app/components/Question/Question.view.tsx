@@ -8,9 +8,10 @@ import {
   QuestionButton,
   ExpandMoreReverseIcon,
 } from "./Question.styles";
+import { QuestionType } from "./Question.types";
 
 interface Props {
-  question: Question;
+  question: QuestionType;
 }
 
 export default function Question({ question }: Props) {

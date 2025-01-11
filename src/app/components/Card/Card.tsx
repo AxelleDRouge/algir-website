@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  CardActionArea,
   CardContent,
   CardMedia,
   Card as MuiCard,
