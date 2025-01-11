@@ -4,6 +4,7 @@ export const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  margin: 5vw 7vh;
 `;
 
 export const OL = styled.ol`
