@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Link from "next/link";
-import { CLEAR_COLOR, DEFAULT_COLOR } from "@/app/config";
+import { DEFAULT_COLOR } from "@/app/config";
 
 export const Wrapper = styled.div<{ visible: boolean }>`
   position: absolute;
