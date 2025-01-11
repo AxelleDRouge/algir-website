@@ -1,5 +1,7 @@
-import * as React from "react"
+import * as React from "react";
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+//@ts-ignore
 function Menu(props) {
   return (
     <svg
@@ -15,7 +17,7 @@ function Menu(props) {
         d="M-192 767.999h1152v-127.999h-1152v127.999zM-192 448.003h1152v-127.999h-1152v127.999zM-192 0.002v127.999h1152v-127.999h-1152z"
       ></path>
     </svg>
-  )
+  );
 }
 
-export default Menu
+export default Menu;

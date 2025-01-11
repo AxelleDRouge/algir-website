@@ -1,5 +1,7 @@
-import * as React from "react"
+import * as React from "react";
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+//@ts-ignore
 function ExpandMore(props) {
   return (
     <svg
@@ -12,7 +14,7 @@ function ExpandMore(props) {
     >
       <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" />
     </svg>
-  )
+  );
 }
 
-export default ExpandMore
+export default ExpandMore;
