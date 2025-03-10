@@ -7,7 +7,6 @@ export const Wrapper = styled.div`
   position: relative;
   display: grid;
   justify-content: center;
-  text-align: center;
   top: 125px;
 `;
 

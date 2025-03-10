@@ -2,22 +2,13 @@
 
 import React from "react";
 import { Header } from "../components/common/Header";
-import {
-  Form,
-  Input,
-  SendButton,
-  Tel,
-  Textarea,
-  Titre,
-  Wrapper,
-} from "./styles";
+import { Form, Input, SendButton, Textarea, Titre, Wrapper } from "./styles";
 
 export default function MeContacterPage() {
   return (
     <Wrapper>
       <Header>Me contacter</Header>
-      <Titre>Par téléphone</Titre>
-      <Tel>+ 33 (0)6 67 67 65 45</Tel>
+      <Titre>Mon adresse mail : algir.achats@gmail.com</Titre>
       <Titre>Par mail</Titre>
       <Form
         method="post"
@@ -27,6 +18,7 @@ export default function MeContacterPage() {
         <Input placeholder={"Prénom"} name="firstname" id="firstname" />
         <Input placeholder={"Société"} name="company" id="company" />
         <Input placeholder={"Mail"} type="email" name="email" id="email" />
+        <Input placeholder={"Tel"} name="phone" id="phone" />
         <Textarea
           placeholder={"Message"}
           rows={10}

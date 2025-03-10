@@ -19,7 +19,7 @@ export default function StaticLinkButton() {
         router.push("/mieux-me-connaitre");
       }}
     >
-      Mieux me connaitre
+      Mieux me connaître
     </Link>
   );
 }

@@ -1,11 +1,13 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const Cards = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding-bottom: 2vh;
-`;
+export const Cards = styled.div<{ showAllContent?: boolean }>(
+  ({ showAllContent }) => css`
+    display: ${showAllContent ? "grid" : "flex"};
+    flex: wrap;
+    gap: 10px;
+    padding-bottom: 2vh;
+  `
+);
 
 export const OL = styled.ol`
   text-align: justify;

@@ -13,7 +13,7 @@ import { Header } from "../components/common/Header";
 export default function MieuxMeConnaitrePage() {
   return (
     <Wrapper>
-      <Header>Expériences</Header>
+      <Header>Expérience</Header>
 
       <HeadLine>
         <Image src={photoPerso} alt="me" width={250} />

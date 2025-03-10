@@ -47,20 +47,20 @@ export default function Card({
     <S.StyledCard
       onClick={handleOpenModal}
       sx={{
-        maxWidth: showAllContent ? 500 : 250,
+        maxWidth: showAllContent ? "unset" : 250,
         height: "fit-content",
         backgroundColor: backgroundColor,
         color: textColor,
+        display: "grid",
+        gridTemplateColumns: showAllContent ? "400px auto" : "",
+        gridTemplateRows: showAllContent ? "" : " 100px 200px",
+        alignItems: "center",
+        justifyItems: !showAllContent ? "center" : "",
       }}
     >
       <>
-        <S.Image>
-          <CardMedia
-            component="img"
-            width={150}
-            src={image.src}
-            alt={imageAlt}
-          />
+        <S.Image showAllContent={showAllContent}>
+          <CardMedia component="img" src={image.src} alt={imageAlt} />
         </S.Image>
         <CardContent>
           <Typography variant="h5" component="div">
@@ -88,12 +88,15 @@ export default function Card({
               transform: "translate(-50%, -50%)",
               boxShadow: 24,
               borderRadius: "10px",
+              alignItems: "center",
+              justifyItems: "center",
             }}
           >
-            <S.Image>
+            <S.Image showAllContent={true}>
               <CardMedia
                 component="img"
                 width={150}
+                height={"fit-content"}
                 src={image.src}
                 alt={imageAlt}
               />

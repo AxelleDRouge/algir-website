@@ -21,7 +21,7 @@ export default function ExperienceContent({
   showAllContent,
 }: Props) {
   return (
-    <Cards>
+    <Cards showAllContent={showAllContent}>
       <Card
         image={TaquipneuImage}
         imageAlt={"taquipneu"}
@@ -34,8 +34,7 @@ export default function ExperienceContent({
           <div>
             <Typography variant={"h6"}>Avril 2020- Décembre 2024 : </Typography>
             <Typography variant={"h5"}>
-              Responsable Achats & Moyens Généraux, TAQUIPNEU, 1er franchisé
-              EUROMASTER de France (Montauban, 82)
+              TAQUIPNEU, 1er franchisé EUROMASTER de France (Montauban, 82)
             </Typography>
             <Typography variant="subtitle1">
               55 points de vente / 600 collaborateurs
@@ -96,8 +95,7 @@ export default function ExperienceContent({
           <div>
             <Typography variant={"h6"}>Avril 2018- Avril 2020 : </Typography>
             <Typography variant={"h5"}>
-              Responsable Achats Frais Généraux & Investissements, CHAUSSON
-              MATERIAUX (St Alban, 31)
+              CHAUSSON MATERIAUX (St Alban, 31)
             </Typography>
             <Typography variant="subtitle1">
               450 agences / 4.000 collaborateurs
@@ -168,7 +166,9 @@ export default function ExperienceContent({
       <Card
         image={KingfisherImage}
         imageAlt={"kingfisher"}
-        title={"Group Purchasing Manager"}
+        title={
+          "Group Purchasing Manager, catégories Ressources Humaines, Voyages et Flotte Automobile"
+        }
         subTitle="Longpont sur Orge (91) – 2 ans "
         backgroundColor={backgroundColor}
         textColor={textColor}
@@ -179,8 +179,7 @@ export default function ExperienceContent({
               Avril 2016 - décembre 2017
             </Typography>
             <Typography variant={"h5"}>
-              Group Purchasing Manager, catégories Ressources Humaines, Voyages
-              et Flotte Automobile, GROUPE KINGFISHER (Templemars, 59)
+              GROUPE KINGFISHER (Templemars, 59)
             </Typography>
             <Typography variant="subtitle1">
               8 pays / 1.200 points de vente / 80.000 collaborateurs
@@ -224,7 +223,7 @@ export default function ExperienceContent({
             <Typography variant={"body2"}>
               Septembre 2014 - avril 2016
             </Typography>
-            <Typography variant={"h5"}>Acheteuse Non Marchand</Typography>
+            <Typography variant={"h5"}>BRICO DEPOT</Typography>
             <P>Rattachement au Responsable Achats Non Marchands</P>
             <P>
               Périmètre : France (~115 magasins) + projets menés en commun avec
@@ -283,8 +282,7 @@ export default function ExperienceContent({
           <div>
             <Typography variant={"body2"}>Octobre 2013 - juin 2014</Typography>
             <Typography variant={"h5"}>
-              Responsable Achats Investissements & Maintenance - Carrefour
-              Hypermarchés, groupe CARREFOUR, Evry
+              CARREFOUR Hypermarchés, groupe CARREFOUR, Evry
             </Typography>
             <P>
               Direction Technique, service Achats techniques Remplacement suite
@@ -319,7 +317,7 @@ export default function ExperienceContent({
       <Card
         image={NatixisImage}
         imageAlt={"natixis"}
-        title={"Acheteuse"}
+        title={"Acheteuse Voyages & Communication"}
         subTitle="Charenton-le-Pont (94) – 2 ans "
         backgroundColor={backgroundColor}
         textColor={textColor}
@@ -330,9 +328,8 @@ export default function ExperienceContent({
               Octobre 2011 - octobre 2013
             </Typography>
             <Typography variant={"h5"}>
-              Acheteuse Voyages & Communication - Natixis SA, groupe BPCE,
-              Charenton le Pont Direction des Achats, équipe Services &
-              Logistique
+              NATIXIS SA, groupe BPCE, Charenton le Pont Direction des Achats,
+              équipe Services & Logistique
             </Typography>
             <Typography variant="subtitle1">
               8 pays / 1.200 points de vente / 80.000 collaborateurs

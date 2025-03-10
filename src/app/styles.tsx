@@ -9,7 +9,6 @@ export const Wrapper = styled.div`
   display: grid;
   justify-content: center;
   color: white;
-  text-align: center;
   background-color: ${CLEAR_COLOR};
 `;
 
