@@ -2,12 +2,12 @@ import { Typography } from "@mui/material";
 import { Card } from "../Card";
 import { Cards, P, UL } from "./ExperienceContent.styles";
 import ChaussonImage from "../../assets/images/chausson.png";
-import NatixisImage from "../../assets/images/natixis.png";
+import NatixisImage from "../../assets/images/natixis.jpg";
 import KingfisherImage from "../../assets/images/kingfisher.png";
-import CarrefourImage from "../../assets/images/carrefour.png";
+import CarrefourImage from "../../assets/images/carrefour.jpg";
 import SavenciaImage from "../../assets/images/savencia.png";
 import TaquipneuImage from "../../assets/images/taquipneu.jpg";
-import BricodepotImage from "../../assets/images/bricoDepot.png";
+import BricodepotImage from "../../assets/images/brico-depot.jpg";
 
 interface Props {
   backgroundColor: string;
