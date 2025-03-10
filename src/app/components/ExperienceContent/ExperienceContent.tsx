@@ -13,12 +13,14 @@ interface Props {
   backgroundColor: string;
   textColor: string;
   showAllContent?: boolean;
+  isMobile?: boolean;
 }
 
 export default function ExperienceContent({
   backgroundColor,
   textColor,
   showAllContent,
+  isMobile = false,
 }: Props) {
   return (
     <Cards showAllContent={showAllContent}>
@@ -30,6 +32,7 @@ export default function ExperienceContent({
         backgroundColor={backgroundColor}
         textColor={textColor}
         showAllContent={showAllContent}
+        isMobile={isMobile}
         content={
           <div>
             <Typography variant={"h6"}>Avril 2020- Décembre 2024 : </Typography>
@@ -91,6 +94,7 @@ export default function ExperienceContent({
         backgroundColor={backgroundColor}
         textColor={textColor}
         showAllContent={showAllContent}
+        isMobile={isMobile}
         content={
           <div>
             <Typography variant={"h6"}>Avril 2018- Avril 2020 : </Typography>
@@ -173,6 +177,7 @@ export default function ExperienceContent({
         backgroundColor={backgroundColor}
         textColor={textColor}
         showAllContent={showAllContent}
+        isMobile={isMobile}
         content={
           <div>
             <Typography variant={"body2"}>
@@ -278,6 +283,7 @@ export default function ExperienceContent({
         backgroundColor={backgroundColor}
         textColor={textColor}
         showAllContent={showAllContent}
+        isMobile={isMobile}
         content={
           <div>
             <Typography variant={"body2"}>Octobre 2013 - juin 2014</Typography>
@@ -322,6 +328,7 @@ export default function ExperienceContent({
         backgroundColor={backgroundColor}
         textColor={textColor}
         showAllContent={showAllContent}
+        isMobile={isMobile}
         content={
           <div>
             <Typography variant={"body2"}>
@@ -396,6 +403,7 @@ export default function ExperienceContent({
         backgroundColor={backgroundColor}
         textColor={textColor}
         showAllContent={showAllContent}
+        isMobile={isMobile}
         content={
           <div>
             <Typography variant={"body2"}>

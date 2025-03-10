@@ -21,6 +21,7 @@ interface Props {
   backgroundColor?: string;
   textColor?: string;
   showAllContent?: boolean;
+  isMobile?: boolean;
 }
 
 export default function Card({
@@ -32,6 +33,7 @@ export default function Card({
   backgroundColor = CLEAR_COLOR,
   textColor = "black",
   showAllContent = false,
+  isMobile = false,
 }: Props) {
   const [openModal, setOpenModal] = useState(false);
 
@@ -52,7 +54,7 @@ export default function Card({
         backgroundColor: backgroundColor,
         color: textColor,
         display: "grid",
-        gridTemplateColumns: showAllContent ? "400px auto" : "",
+        gridTemplateColumns: showAllContent && !isMobile ? "400px auto" : "",
         gridTemplateRows: showAllContent ? "" : " 100px 200px",
         alignItems: "center",
         justifyItems: !showAllContent ? "center" : "",

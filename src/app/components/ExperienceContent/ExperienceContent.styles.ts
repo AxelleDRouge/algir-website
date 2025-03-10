@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 export const Cards = styled.div<{ showAllContent?: boolean }>(
   ({ showAllContent }) => css`
     display: ${showAllContent ? "grid" : "flex"};
-    flex: wrap;
+    flex-wrap: wrap;
     gap: 10px;
     padding-bottom: 2vh;
   `

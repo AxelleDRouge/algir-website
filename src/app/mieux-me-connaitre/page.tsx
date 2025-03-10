@@ -9,8 +9,11 @@ import Image from "next/image";
 import { Typography } from "@mui/material";
 import { OL } from "../styles";
 import { Header } from "../components/common/Header";
+import useWindowDimensions from "../hooks/useWindowDimensions.hook";
 
 export default function MieuxMeConnaitrePage() {
+  const { width } = useWindowDimensions();
+
   return (
     <Wrapper>
       <Header>Expérience</Header>
@@ -62,6 +65,7 @@ export default function MieuxMeConnaitrePage() {
         backgroundColor={DEFAULT_COLOR}
         textColor={"white"}
         showAllContent={true}
+        isMobile={width <= 768}
       />
     </Wrapper>
   );
