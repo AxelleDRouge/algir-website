@@ -13,6 +13,10 @@ export const Wrapper = styled.div`
   @media screen and (max-width: 1025px) {
     margin: 1vh 1vw;
   }
+
+  @media screen and (max-width: 796px) {
+    padding: 2vmin;
+  }
 `;
 
 export const HeadLine = styled.div`

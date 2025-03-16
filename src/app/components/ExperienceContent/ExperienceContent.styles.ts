@@ -6,6 +6,10 @@ export const Cards = styled.div<{ showAllContent?: boolean }>(
     flex-wrap: wrap;
     gap: 10px;
     padding-bottom: 2vh;
+
+    @media screen and (max-width: 796px) {
+      justify-content: center;
+    }
   `
 );
 

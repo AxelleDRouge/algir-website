@@ -10,6 +10,10 @@ export const Wrapper = styled.div`
   justify-content: center;
   color: white;
   background-color: ${CLEAR_COLOR};
+
+  @media screen and (max-width: 796px) {
+    top: 80px;
+  }
 `;
 
 export const Pres = styled.div`
@@ -30,6 +34,11 @@ export const Pres = styled.div`
   @media screen and (min-width: 1440px) {
     height: 845px;
   }
+
+  @media screen and (max-width: 796px) {
+    grid-template-rows: auto auto;
+    grid-template-columns: auto;
+  }
 `;
 export const MainText = styled.div`
   font-size: 29px;
@@ -38,6 +47,10 @@ export const MainText = styled.div`
 
   @media screen and (min-width: 1440px) {
     font-size: 40px;
+  }
+
+  @media screen and (max-width: 796px) {
+    font-size: 2rem;
   }
 `;
 export const StyledImage = styled(Image)`

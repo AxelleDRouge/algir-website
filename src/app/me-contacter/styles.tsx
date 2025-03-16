@@ -8,6 +8,11 @@ export const Wrapper = styled.div`
   display: grid;
   justify-content: center;
   top: 125px;
+
+  @media screen and (max-width: 796px) {
+    padding: 2vmin;
+    top: 85px;
+  }
 `;
 
 export const Titre = styled.h2`

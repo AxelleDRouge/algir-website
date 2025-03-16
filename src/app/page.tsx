@@ -28,7 +28,7 @@ export default function HomePage() {
           <HomeImage />
           <StyledImage src={photoPerso} alt="me" width={250} />
           <MainText>
-            <Typography variant="h2" component="div">
+            <Typography variant="h2" component="div" sx={{ fontSize: "2rem" }}>
               Optimisation des dépenses externes des PME
             </Typography>
           </MainText>

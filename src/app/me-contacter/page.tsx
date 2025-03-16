@@ -21,7 +21,7 @@ export default function MeContacterPage() {
         <Input placeholder={"Tel"} name="phone" id="phone" />
         <Textarea
           placeholder={"Message"}
-          rows={10}
+          rows={5}
           name="message"
           id="message"
         />

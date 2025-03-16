@@ -223,6 +223,7 @@ export default function ExperienceContent({
         backgroundColor={backgroundColor}
         textColor={textColor}
         showAllContent={showAllContent}
+        isMobile={isMobile}
         content={
           <div>
             <Typography variant={"body2"}>

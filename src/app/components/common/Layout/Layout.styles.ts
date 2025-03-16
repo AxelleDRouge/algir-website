@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Main = styled.main`
-  height: max-content;
+  height: 85vh;
 `;
 export const Footer = styled.div`
   padding: 5vh 7vw;
