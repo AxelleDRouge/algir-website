@@ -17,7 +17,7 @@ import HomeImage from "./components/common/Images/HomePageImage/HomePageImage";
 import ExperienceContent from "./components/ExperienceContent/ExperienceContent";
 import { CLEAR_COLOR } from "./config";
 import { Typography } from "@mui/material";
-import photoPerso from "./assets/images/photoPerso.jpg";
+import photo from "./assets/images/photo.jpg";
 import StaticLinkButton from "./components/common/Button/StaticLinkButton";
 
 export default function HomePage() {
@@ -26,7 +26,7 @@ export default function HomePage() {
       <Wrapper>
         <Pres>
           <HomeImage />
-          <StyledImage src={photoPerso} alt="me" width={250} />
+          <StyledImage src={photo} alt="me" width={250} />
           <MainText>
             <Typography variant="h2" component="div" sx={{ fontSize: "2rem" }}>
               Optimisation des dépenses externes des PME

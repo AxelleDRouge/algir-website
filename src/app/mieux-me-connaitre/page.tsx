@@ -4,7 +4,7 @@ import React from "react";
 import { HeadLine, P, Wrapper } from "./styles";
 import ExperienceContent from "../components/ExperienceContent/ExperienceContent";
 import { DEFAULT_COLOR } from "../config";
-import photoPerso from "../assets/images/photoPerso.jpg";
+import photo from "../assets/images/photo.jpg";
 import Image from "next/image";
 import { Typography } from "@mui/material";
 import { OL } from "../styles";
@@ -19,7 +19,7 @@ export default function MieuxMeConnaitrePage() {
       <Header>Expérience</Header>
 
       <HeadLine>
-        <Image src={photoPerso} alt="me" width={250} />
+        <Image src={photo} alt="me" width={250} />
 
         <div>
           <P>
